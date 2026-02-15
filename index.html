@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hippo Job Scam Scanner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-overlay"></div>
+    <header class="navbar glass">
+      <div class="brand">Hippo Job Scam Scanner</div>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#home">Home</a>
+        <a href="#scanner">Scanner</a>
+        <a href="#result">Hasil</a>
+      </nav>
+    </header>
+
+    <main id="home" class="container">
+      <section class="hero glass" id="scanner">
+        <div class="hero-left">
+          <h1>Cek lowongan sebelum melamar</h1>
+          <form id="scanner-form" novalidate>
+            <label>
+              Posisi
+              <input id="position" name="position" type="text" placeholder="Contoh: Admin Data Entry" required />
+            </label>
+            <label>
+              Jobdesk
+              <textarea id="jobdesk" name="jobdesk" placeholder="Tuliskan deskripsi pekerjaan" rows="4" required></textarea>
+            </label>
+            <label>
+              Company (opsional)
+              <input id="company" name="company" type="text" placeholder="Nama perusahaan" />
+            </label>
+            <label>
+              Salary
+              <input id="salary" name="salary" type="text" placeholder="Contoh: 8.000.000" required />
+            </label>
+            <button type="submit" class="btn-primary">GENERATE</button>
+          </form>
+        </div>
+
+        <div class="hero-right">
+          <img src="assets/hippo-full.png" alt="Maskot Hippo" />
+        </div>
+      </section>
+
+      <section id="result" class="result-card glass" aria-live="polite">
+        <p class="result-label">Status Scan</p>
+        <h2 id="status-text">Isi form lalu klik GENERATE</h2>
+        <ul id="reason-list"></ul>
+        <p class="disclaimer">
+          Ini hanya analisa sekilas dan tidak dapat menjadi acuan pasti apakah scam atau tidak.
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
